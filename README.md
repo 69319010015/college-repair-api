@@ -122,7 +122,7 @@ curl -s "localhost:3000/api/v1/tickets?status=PENDING&page=1&limit=10" \
 
 ## 5. การออกแบบ (Design / UML)
 
-แผนภาพอยู่ใน [`docs/uml/`](docs/uml/) — แต่ละแผนภาพมีทั้ง `.svg` (ดู/พิมพ์) และ `.drawio` (แก้ใน [diagrams.net](https://app.diagrams.net) ได้)
+แผนภาพอยู่ใน [`docs/uml/`](docs/uml/) — แต่ละแผนภาพมี 3 รูปแบบ: `.svg` (คมทุกขนาด), `.png` (พร้อมแนบรายงาน/ส่งงาน) และ `.drawio` (แก้ต่อใน [diagrams.net](https://app.diagrams.net) ได้)
 
 | แผนภาพ | ไฟล์ | เนื้อหา |
 |---|---|---|
