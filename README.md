@@ -23,11 +23,18 @@ tracking their status through a strict state machine, and managing the device re
 ### วงจรสถานะงานซ่อม (Ticket state machine)
 
 ```
-PENDING ──► ACCEPTED ──► IN_PROGRESS ──► COMPLETED ──► CLOSED
-   │            │
-   ├──► REJECTED (ช่าง/ผู้ดูแล)
-   └──► CANCELED (ผู้แจ้ง ยกเลิกได้เฉพาะตอน PENDING)
+PENDING        →  ACCEPTED | REJECTED | CANCELED
+ACCEPTED       →  IN_PROGRESS | CANCELED
+IN_PROGRESS    →  WAITING_PARTS (รออะไหล่) | COMPLETED
+WAITING_PARTS  →  IN_PROGRESS (อะไหล่มาแล้ว) | COMPLETED
+COMPLETED      →  CLOSED
 ```
+
+**4 สถานะหลักตามโจทย์:** `PENDING` รอดำเนินการ · `IN_PROGRESS` กำลังซ่อม ·
+`WAITING_PARTS` รออะไหล่ · `COMPLETED` ซ่อมเสร็จ
+(ส่วน `ACCEPTED` ช่างรับเรื่องแล้ว, `CLOSED` ปิดงาน, `REJECTED` ซ่อมไม่ได้,
+`CANCELED` ผู้แจ้งยกเลิก เป็นสถานะเสริมของขั้นตอนทำงาน)
+ชื่อไทยทุกสถานะส่งกลับมาพร้อมฟิลด์ `statusLabel` ใน response
 
 กฎอยู่ในโค้ดที่ [`src/domain/ticketStatus.js`](src/domain/ticketStatus.js) — การข้ามขั้น
 ถูกปฏิเสธด้วย `409 INVALID_STATE` และการเปลี่ยนสถานะที่บทบาทไม่มีสิทธิ์ถูกปฏิเสธด้วย `403 FORBIDDEN`

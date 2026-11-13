@@ -2,8 +2,13 @@ const ApiError = require('../utils/ApiError');
 const ticketRepository = require('../repositories/ticket.repository');
 const deviceRepository = require('../repositories/device.repository');
 const { ROLES } = require('../domain/roles');
-const { canTransition, actorAllowed } = require('../domain/ticketStatus');
+const { canTransition, actorAllowed, labelOf } = require('../domain/ticketStatus');
 const { STATUS } = require('../domain/ticketStatus');
+
+/** เพิ่มชื่อไทยของสถานะลงใน response เพื่อให้หน้าจอ/mือถือแสดงได้โดยไม่ต้องแปลงเอง */
+function decorate(ticket) {
+  return { ...ticket, statusLabel: labelOf(ticket.status) };
+}
 
 function createTicket(input, user) {
   if (input.deviceId) {
@@ -27,7 +32,7 @@ function createTicket(input, user) {
     updatedAt: now,
     statusHistory: [{ status: STATUS.PENDING, by: user.id, at: now, note: 'แจ้งซ่อม' }],
   };
-  return ticketRepository.save(ticket);
+  return decorate(ticketRepository.save(ticket));
 }
 
 function listTickets({ status, page, limit, q }, user) {
@@ -42,7 +47,7 @@ function listTickets({ status, page, limit, q }, user) {
   const total = matches.length;
   const start = (page - 1) * limit;
   return {
-    data: matches.slice(start, start + limit),
+    data: matches.slice(start, start + limit).map(decorate),
     meta: { page, limit, total, totalPages: Math.max(1, Math.ceil(total / limit)) },
   };
 }
@@ -53,7 +58,7 @@ function getTicket(id, user) {
   if (user.role === ROLES.STUDENT && ticket.requesterId !== user.id) {
     throw ApiError.forbidden('เข้าถึงได้เฉพาะงานซ่อมของตนเอง');
   }
-  return ticket;
+  return decorate(ticket);
 }
 
 function updateStatus(id, { status: nextStatus, note }, user) {
@@ -81,7 +86,7 @@ function updateStatus(id, { status: nextStatus, note }, user) {
   ticket.updatedAt = now;
   if (nextStatus === STATUS.ACCEPTED) ticket.assignedTo = user.id;
   ticket.statusHistory.push({ status: nextStatus, by: user.id, role: user.role, at: now, note: note || null });
-  return ticketRepository.save(ticket);
+  return decorate(ticketRepository.save(ticket));
 }
 
 module.exports = { createTicket, listTickets, getTicket, updateStatus };

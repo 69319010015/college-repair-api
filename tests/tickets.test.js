@@ -80,6 +80,60 @@ describe('ระบบแจ้งซ่อม — flow หลัก', () => {
     expect(completed.body.error.code).toBe('INVALID_STATE');
   });
 
+  it('ช่างพักงานเป็น "รออะไหล่" แล้วกลับมาซ่อมต่อได้ และปิดงานเป็นซ่อมเสร็จ', async () => {
+    const student = await loginAs('STUDENT');
+    const tech = await loginAs('TECHNICIAN', 'T100');
+
+    const created = await request(app)
+      .post('/api/v1/tickets')
+      .set('Authorization', `Bearer ${student}`)
+      .send(newTicket);
+    const id = created.body.data.id;
+
+    const patch = (token, body) => request(app)
+      .patch(`/api/v1/tickets/${id}/status`)
+      .set('Authorization', `Bearer ${token}`)
+      .send(body);
+
+    expect((await patch(tech, { status: 'ACCEPTED' })).status).toBe(200);
+    expect((await patch(tech, { status: 'IN_PROGRESS' })).status).toBe(200);
+
+    // อะไหล่หมด → รออะไหล่
+    const waiting = await patch(tech, { status: 'WAITING_PARTS', note: 'รอฮาร์ดดิสก์จากคลัง' });
+    expect(waiting.status).toBe(200);
+    expect(waiting.body.data.status).toBe('WAITING_PARTS');
+    expect(waiting.body.data.statusLabel).toBe('รออะไหล่');
+
+    // อะไหล่มาแล้ว → กลับมาซ่อมต่อ
+    const resumed = await patch(tech, { status: 'IN_PROGRESS', note: 'อะไหล่มาแล้ว' });
+    expect(resumed.status).toBe(200);
+
+    const done = await patch(tech, { status: 'COMPLETED', note: 'เปลี่ยนฮาร์ดดิสก์ใหม่' });
+    expect(done.status).toBe(200);
+    expect(done.body.data.status).toBe('COMPLETED');
+    expect(done.body.data.statusLabel).toBe('ซ่อมเสร็จ');
+
+    // ประวัติการเปลี่ยนสถานะต้องครบทุกครั้ง ไม่เขียนทับ
+    expect(done.body.data.statusHistory.map((h) => h.status))
+      .toEqual(['PENDING', 'ACCEPTED', 'IN_PROGRESS', 'WAITING_PARTS', 'IN_PROGRESS', 'COMPLETED']);
+  });
+
+  it('ข้ามขั้นเป็น "รออะไหล่" ทันทีจากรอดำเนินการไม่ได้ (409)', async () => {
+    const student = await loginAs('STUDENT');
+    const tech = await loginAs('TECHNICIAN', 'T100');
+    const created = await request(app)
+      .post('/api/v1/tickets')
+      .set('Authorization', `Bearer ${student}`)
+      .send(newTicket);
+
+    const res = await request(app)
+      .patch(`/api/v1/tickets/${created.body.data.id}/status`)
+      .set('Authorization', `Bearer ${tech}`)
+      .send({ status: 'WAITING_PARTS' });
+    expect(res.status).toBe(409);
+    expect(res.body.error.code).toBe('INVALID_STATE');
+  });
+
   it('นักศึกษาไม่มีสิทธิ์ตั้งสถานะ IN_PROGRESS (403)', async () => {
     const student = await loginAs('STUDENT');
     const created = await request(app)
