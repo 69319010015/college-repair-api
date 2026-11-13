@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: college-repair-api
+    runtime: node
+    plan: free
+    region: singapore
+    branch: main
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/v1/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "20"
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: TOKEN_TTL_SECONDS
+        value: "3600"

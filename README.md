@@ -149,6 +149,20 @@ curl -s "localhost:3000/api/v1/tickets?status=PENDING&page=1&limit=10" \
   ห้ามใช้ใน production: ต้องต่อตาราง `users` + password hash และจำกัดการขอสิทธิ์ ADMIN
 - ยังไม่มี: อัปโหลดไฟล์ภาพหลักฐาน, การแจ้งเตือน (อีเมล/LINE), รายงานสรุปสำหรับผู้บริหาร, CI
 
+## 6.5 ทดลองออนไลน์ (Deploy on Render)
+
+Repository นี้มี [`render.yaml`](render.yaml) (Blueprint) พร้อมใช้ — กดปุ่มเดียวเพื่อ deploy
+เป็น Web Service ฟรีบน Render:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/69319010015/college-repair-api)
+
+หลัง deploy เสร็จจะได้ URL เช่น `https://college-repair-api.onrender.com` แล้วเปิด
+[API Test Console](https://github.com/69319010015/repair-api-tester) แล้วใส่ URL นั้นในช่อง
+API Base URL (ไม่ต้องพึ่ง tunnel หรือรันในเครื่องอีก)
+
+ข้อควรรู้ของแผนฟรี: service จะ sleep เมื่อไม่มีคนเรียก 15 นาที คำขอแรกหลังตื่นจะช้าประมาณ
+30–50 วินาที และข้อมูลอยู่ในหน่วยความจำจึงหายเมื่อ service รีสตาร์ท
+
 ## 7. แผนถัดไป (Roadmap)
 
 1. PostgreSQL + migration ตาม ER diagram, seed ข้อมูลตัวอย่าง
