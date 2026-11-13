@@ -1,70 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="860" viewBox="0 0 1240 860" font-family="'Sarabun','Noto Sans Thai','TH Sarabun New','Leelawadee UI',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="1090" viewBox="0 0 1450 1090" font-family="'Sarabun','Noto Sans Thai','Garuda',sans-serif">
 <title>Use Case Diagram - ระบบแจ้งซ่อมคอมพิวเตอร์และอุปกรณ์ของวิทยาลัย</title>
-<rect width="1240" height="860" fill="#ffffff"/>
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/></marker><marker id="arrowOpen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#475569" stroke-width="1.4"/></marker><marker id="diamond" viewBox="0 0 12 12" refX="1" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M 1 6 L 6 1 L 11 6 L 6 11 z" fill="#ffffff" stroke="#475569"/></marker></defs>
-<text x="620.0" y="34" font-size="22" text-anchor="middle" fill="#1f3864" font-weight="bold" font-style="normal">Use Case Diagram — ระบบแจ้งซ่อมคอมพิวเตอร์และอุปกรณ์ของวิทยาลัย</text>
-<rect x="330" y="60" width="620" height="770" rx="10" fill="#f8fafc" stroke="#1f3864" stroke-width="2.2"/>
-<text x="640.0" y="90" font-size="16" text-anchor="middle" fill="#1f2937" font-weight="bold" font-style="normal">ระบบแจ้งซ่อมคอมพิวเตอร์และอุปกรณ์ของวิทยาลัย</text>
-<ellipse cx="470" cy="130" rx="125" ry="46" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
-<text x="470" y="126" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">เข้าสู่ระบบ /</text>
-<text x="470" y="144" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">ยืนยันตัวตน</text>
-<ellipse cx="470" cy="250" rx="125" ry="46" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
-<text x="470" y="255" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">แจ้งซ่อมอุปกรณ์</text>
-<ellipse cx="470" cy="370" rx="125" ry="46" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
-<text x="470" y="366" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
-<text x="470" y="384" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">แนบข้อมูลอุปกรณ์ที่เสีย</text>
-<ellipse cx="470" cy="490" rx="125" ry="46" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
-<text x="470" y="486" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
-<text x="470" y="504" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">ติดตามสถานะงานซ่อม</text>
-<ellipse cx="470" cy="610" rx="125" ry="46" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
-<text x="470" y="615" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">ยกเลิกคำขอซ่อม</text>
-<ellipse cx="810" cy="130" rx="125" ry="46" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
-<text x="810" y="126" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">รับเรื่อง /</text>
-<text x="810" y="144" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">มอบหมายงาน</text>
-<ellipse cx="810" cy="250" rx="125" ry="46" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
-<text x="810" y="246" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
-<text x="810" y="264" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">อัปเดตสถานะการซ่อม</text>
-<ellipse cx="810" cy="370" rx="125" ry="46" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
-<text x="810" y="366" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
-<text x="810" y="384" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">บันทึกผลและปิดงานซ่อม</text>
-<ellipse cx="810" cy="490" rx="125" ry="46" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
-<text x="810" y="486" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
-<text x="810" y="504" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">จัดการทะเบียนอุปกรณ์</text>
-<ellipse cx="810" cy="610" rx="125" ry="46" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
-<text x="810" y="606" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
-<text x="810" y="624" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">ออกรายงานสรุปงานซ่อม</text>
-<ellipse cx="810" cy="730" rx="125" ry="46" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
-<text x="810" y="726" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
-<text x="810" y="744" font-size="13.5" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">จัดการผู้ใช้และสิทธิ์</text>
-<circle cx="150" cy="210" r="13" fill="none" stroke="#1d4ed8" stroke-width="2"/>
-<line x1="150" y1="223" x2="150" y2="262" stroke="#1d4ed8" stroke-width="2"/>
-<line x1="128" y1="236" x2="172" y2="236" stroke="#1d4ed8" stroke-width="2"/>
-<line x1="150" y1="262" x2="132" y2="290" stroke="#1d4ed8" stroke-width="2"/>
-<line x1="150" y1="262" x2="168" y2="290" stroke="#1d4ed8" stroke-width="2"/>
-<text x="150" y="310" font-size="15" text-anchor="middle" fill="#1d4ed8" font-weight="bold" font-style="normal">นักศึกษา</text>
-<circle cx="150" cy="520" r="13" fill="none" stroke="#1d4ed8" stroke-width="2"/>
-<line x1="150" y1="533" x2="150" y2="572" stroke="#1d4ed8" stroke-width="2"/>
-<line x1="128" y1="546" x2="172" y2="546" stroke="#1d4ed8" stroke-width="2"/>
-<line x1="150" y1="572" x2="132" y2="600" stroke="#1d4ed8" stroke-width="2"/>
-<line x1="150" y1="572" x2="168" y2="600" stroke="#1d4ed8" stroke-width="2"/>
-<text x="150" y="620" font-size="15" text-anchor="middle" fill="#1d4ed8" font-weight="bold" font-style="normal">ช่างเทคนิค</text>
-<circle cx="1110" cy="330" r="13" fill="none" stroke="#1d4ed8" stroke-width="2"/>
-<line x1="1110" y1="343" x2="1110" y2="382" stroke="#1d4ed8" stroke-width="2"/>
-<line x1="1088" y1="356" x2="1132" y2="356" stroke="#1d4ed8" stroke-width="2"/>
-<line x1="1110" y1="382" x2="1092" y2="410" stroke="#1d4ed8" stroke-width="2"/>
-<line x1="1110" y1="382" x2="1128" y2="410" stroke="#1d4ed8" stroke-width="2"/>
-<text x="1110" y="430" font-size="15" text-anchor="middle" fill="#1d4ed8" font-weight="bold" font-style="normal">ผู้ดูแลระบบ</text>
-<line x1="150" y1="300" x2="345" y2="130" stroke="#475569" stroke-width="1.2"/>
-<line x1="150" y1="300" x2="345" y2="250" stroke="#475569" stroke-width="1.2"/>
-<line x1="150" y1="300" x2="345" y2="370" stroke="#475569" stroke-width="1.2"/>
-<line x1="150" y1="300" x2="345" y2="490" stroke="#475569" stroke-width="1.2"/>
-<line x1="150" y1="300" x2="345" y2="610" stroke="#475569" stroke-width="1.2"/>
-<line x1="150" y1="610" x2="685" y2="130" stroke="#475569" stroke-width="1.2"/>
-<line x1="150" y1="610" x2="685" y2="250" stroke="#475569" stroke-width="1.2"/>
-<line x1="150" y1="610" x2="685" y2="370" stroke="#475569" stroke-width="1.2"/>
-<line x1="150" y1="610" x2="345" y2="490" stroke="#475569" stroke-width="1.2"/>
-<line x1="1110" y1="420" x2="935" y2="130" stroke="#475569" stroke-width="1.2"/>
-<line x1="1110" y1="420" x2="935" y2="490" stroke="#475569" stroke-width="1.2"/>
-<line x1="1110" y1="420" x2="935" y2="610" stroke="#475569" stroke-width="1.2"/>
-<line x1="1110" y1="420" x2="935" y2="730" stroke="#475569" stroke-width="1.2"/>
+<rect width="1450" height="1090" fill="#ffffff"/>
+<text x="725.0" y="42" font-size="22" text-anchor="middle" fill="#1f3864" font-weight="bold" font-style="normal">Use Case Diagram — ระบบแจ้งซ่อมคอมพิวเตอร์และอุปกรณ์ของวิทยาลัย</text>
+<rect x="300" y="80" width="900" height="960" rx="10" fill="#f8fafc" stroke="#1f3864" stroke-width="2.2"/>
+<text x="750.0" y="110" font-size="15.5" text-anchor="middle" fill="#1f3864" font-weight="bold" font-style="normal">ระบบแจ้งซ่อมคอมพิวเตอร์และอุปกรณ์ของวิทยาลัย</text>
+<ellipse cx="725" cy="190" rx="105" ry="44" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
+<text x="725" y="195" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">เข้าสู่ระบบ</text>
+<ellipse cx="480" cy="330" rx="105" ry="44" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
+<text x="480" y="326" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
+<text x="480" y="344" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">แจ้งซ่อมคอมพิวเตอร์</text>
+<ellipse cx="480" cy="450" rx="105" ry="44" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
+<text x="480" y="446" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
+<text x="480" y="464" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">ติดตามสถานะงานซ่อม</text>
+<ellipse cx="480" cy="570" rx="105" ry="44" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
+<text x="480" y="575" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">ยกเลิกคำขอซ่อม</text>
+<ellipse cx="480" cy="700" rx="105" ry="44" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
+<text x="480" y="696" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
+<text x="480" y="714" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">ดูประวัติการซ่อมของเครื่อง</text>
+<ellipse cx="930" cy="330" rx="105" ry="44" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
+<text x="930" y="335" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">รับงานซ่อม</text>
+<ellipse cx="930" cy="450" rx="105" ry="44" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
+<text x="930" y="446" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
+<text x="930" y="464" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">อัปเดตสถานะและบันทึกผลซ่อม</text>
+<ellipse cx="930" cy="570" rx="105" ry="44" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
+<text x="930" y="566" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
+<text x="930" y="584" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">บันทึกประวัติการซ่อม</text>
+<ellipse cx="930" cy="700" rx="105" ry="44" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
+<text x="930" y="696" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
+<text x="930" y="714" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">ดูรายงานสรุปงานซ่อม</text>
+<ellipse cx="930" cy="830" rx="105" ry="44" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
+<text x="930" y="826" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
+<text x="930" y="844" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">มอบหมายงานให้ช่าง</text>
+<ellipse cx="930" cy="950" rx="105" ry="44" fill="#e8f0fe" stroke="#3b6fd4" stroke-width="1.6"/>
+<text x="930" y="946" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal"></text>
+<text x="930" y="964" font-size="13" text-anchor="middle" fill="#1f2937" font-weight="normal" font-style="normal">จัดการทะเบียนเครื่องและห้อง</text>
+<circle cx="200" cy="400" r="12" fill="none" stroke="#1d4ed8" stroke-width="2"/>
+<line x1="200" y1="412" x2="200" y2="450" stroke="#1d4ed8" stroke-width="2"/>
+<line x1="180" y1="425" x2="220" y2="425" stroke="#1d4ed8" stroke-width="2"/>
+<line x1="200" y1="450" x2="184" y2="478" stroke="#1d4ed8" stroke-width="2"/>
+<line x1="200" y1="450" x2="216" y2="478" stroke="#1d4ed8" stroke-width="2"/>
+<text x="200" y="500" font-size="13.5" text-anchor="middle" fill="#1d4ed8" font-weight="bold" font-style="normal">นักศึกษาและครูผู้สอน</text>
+<text x="200" y="519" font-size="13.5" text-anchor="middle" fill="#1d4ed8" font-weight="bold" font-style="normal">(ผู้แจ้ง)</text>
+<circle cx="1290" cy="290" r="12" fill="none" stroke="#1d4ed8" stroke-width="2"/>
+<line x1="1290" y1="302" x2="1290" y2="340" stroke="#1d4ed8" stroke-width="2"/>
+<line x1="1270" y1="315" x2="1310" y2="315" stroke="#1d4ed8" stroke-width="2"/>
+<line x1="1290" y1="340" x2="1274" y2="368" stroke="#1d4ed8" stroke-width="2"/>
+<line x1="1290" y1="340" x2="1306" y2="368" stroke="#1d4ed8" stroke-width="2"/>
+<text x="1290" y="390" font-size="13.5" text-anchor="middle" fill="#1d4ed8" font-weight="bold" font-style="normal">ช่างเทคนิค</text>
+<circle cx="1290" cy="790" r="12" fill="none" stroke="#1d4ed8" stroke-width="2"/>
+<line x1="1290" y1="802" x2="1290" y2="840" stroke="#1d4ed8" stroke-width="2"/>
+<line x1="1270" y1="815" x2="1310" y2="815" stroke="#1d4ed8" stroke-width="2"/>
+<line x1="1290" y1="840" x2="1274" y2="868" stroke="#1d4ed8" stroke-width="2"/>
+<line x1="1290" y1="840" x2="1306" y2="868" stroke="#1d4ed8" stroke-width="2"/>
+<text x="1290" y="890" font-size="13.5" text-anchor="middle" fill="#1d4ed8" font-weight="bold" font-style="normal">หัวหน้างานอาคารสถานที่</text>
+<text x="1290" y="909" font-size="13.5" text-anchor="middle" fill="#1d4ed8" font-weight="bold" font-style="normal">และคอมพิวเตอร์</text>
+<polyline points="200,436 330,436" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="330,436 330,190 620,190" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="330,436 375,330" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="330,436 375,450" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="330,436 375,570" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="330,436 375,700" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="1262,300 1120,300" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="1120,300 1035,330" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="1120,300 1035,450" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="1120,300 1120,190 830,190" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="1120,240 665,240 665,700 585,700" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="1262,800 1140,800" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="1140,800 1035,700" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="1140,800 1035,830" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="1140,800 1035,950" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="1140,800 1140,205 824,205" fill="none" stroke="#475569" stroke-width="1.3"/>
+<polyline points="548,292 655,216" fill="none" stroke="#475569" stroke-width="1.3" stroke-dasharray="7 5"/>
+<rect x="556" y="228" width="78" height="19" fill="#ffffff"/>
+<text x="596" y="242" font-size="12.5" text-anchor="middle" fill="#b45309" font-weight="bold" font-style="normal">«include»</text>
+<polyline points="930,494 930,526" fill="none" stroke="#475569" stroke-width="1.3" stroke-dasharray="7 5"/>
+<rect x="936" y="502" width="82" height="19" fill="#ffffff"/>
+<text x="941" y="516" font-size="12.5" text-anchor="start" fill="#b45309" font-weight="bold" font-style="normal">«include»</text>
+<text x="300" y="1078" font-size="12.5" text-anchor="start" fill="#475569" font-weight="normal" font-style="italic">«include» = ทุกครั้งที่ทำ use case ต้นทาง ระบบต้องทำงานของ use case ปลายทางรวมอยู่ด้วยเสมอ</text>
 </svg>
