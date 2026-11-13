@@ -43,7 +43,7 @@
 <text x="530.0" y="592" font-size="12.5" text-anchor="middle" fill="#222" font-weight="normal" font-style="normal">updateStatus(id, ACCEPTED, user)</text>
 <rect x="654" y="604" width="12" height="34" rx="2" fill="#c7d7f5" stroke="#3b6fd4" stroke-width="1"/>
 <path d="M 660 660 h 90 v 46 h -90" fill="none" stroke="#475569" stroke-width="1.4" marker-end="url(#arrow)"/>
-<text x="720" y="760" font-size="12.5" text-anchor="middle" fill="#334155" font-weight="normal" font-style="normal">ตรวจ state machine + บทบาทผู้ใช้</text>
+<text x="764" y="690" font-size="12.5" text-anchor="start" fill="#334155" font-weight="normal" font-style="normal">ตรวจ state machine + บทบาทผู้ใช้</text>
 <line x1="660" y1="740" x2="900" y2="740" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
 <text x="780.0" y="732" font-size="12.5" text-anchor="middle" fill="#222" font-weight="normal" font-style="normal">save(ticket)  assignedTo=techId</text>
 <rect x="894" y="744" width="12" height="34" rx="2" fill="#c7d7f5" stroke="#3b6fd4" stroke-width="1"/>
